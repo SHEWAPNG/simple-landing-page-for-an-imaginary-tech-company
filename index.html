@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Company | Innovative Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Load theme from localStorage
+        function loadTheme() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.classList.toggle('dark', theme === 'dark');
+        }
+
+        // Toggle theme and save preference
+        function toggleTheme() {
+            const isDark = document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+
+        window.onload = loadTheme;
+    </script>
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-all duration-500">
+
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center p-5 bg-gray-200 dark:bg-gray-800">
+        <h1 class="text-2xl font-bold text-blue-500 dark:text-blue-400">TechCo</h1>
+        <ul class="flex gap-6">
+            <li><a href="#about" class="hover:text-blue-500 dark:hover:text-blue-300">About</a></li>
+            <li><a href="#services" class="hover:text-blue-500 dark:hover:text-blue-300">Services</a></li>
+            <li><a href="#contact" class="hover:text-blue-500 dark:hover:text-blue-300">Contact</a></li>
+        </ul>
+        <button onclick="toggleTheme()" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 dark:bg-yellow-400 dark:text-gray-900 dark:hover:bg-yellow-500">
+            Toggle Mode
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="flex flex-col items-center justify-center text-center h-screen bg-cover bg-center transition-all duration-500" style="background-image: url('https://source.unsplash.com/1600x900/?technology,ai');">
+        <h2 class="text-4xl font-bold">Innovate. Transform. Succeed.</h2>
+        <p class="mt-4 text-gray-700 dark:text-gray-300">Empowering businesses with cutting-edge technology.</p>
+        <a href="#services" class="mt-6 px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600">Explore Our Services</a>
+    </header>
+
+    <!-- About Us -->
+    <section id="about" class="p-10 text-center">
+        <h2 class="text-3xl font-bold text-blue-500 dark:text-blue-400">Who We Are</h2>
+        <p class="mt-4 text-gray-600 dark:text-gray-300">We specialize in building futuristic tech solutions that drive success.</p>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="p-10 bg-gray-100 dark:bg-gray-800">
+        <h2 class="text-3xl font-bold text-center text-blue-500 dark:text-blue-400">Our Services</h2>
+        <div class="grid md:grid-cols-3 gap-6 mt-8">
+            <div class="p-6 bg-gray-200 dark:bg-gray-700 rounded-lg">
+                <h3 class="text-xl font-semibold text-blue-500 dark:text-blue-300">Web Development</h3>
+                <p class="text-gray-700 dark:text-gray-300">High-performance websites for startups & enterprises.</p>
+            </div>
+            <div class="p-6 bg-gray-200 dark:bg-gray-700 rounded-lg">
+                <h3 class="text-xl font-semibold text-blue-500 dark:text-blue-300">AI & Automation</h3>
+                <p class="text-gray-700 dark:text-gray-300">Smart automation to streamline business operations.</p>
+            </div>
+            <div class="p-6 bg-gray-200 dark:bg-gray-700 rounded-lg">
+                <h3 class="text-xl font-semibold text-blue-500 dark:text-blue-300">Blockchain & Web3</h3>
+                <p class="text-gray-700 dark:text-gray-300">Next-gen decentralized applications & security solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Social Media -->
+    <section id="contact" class="p-10 text-center bg-gray-200 dark:bg-gray-800">
+        <h2 class="text-3xl font-bold text-blue-500 dark:text-blue-400">Get In Touch</h2>
+        <p class="mt-4 text-gray-700 dark:text-gray-300">Ready to elevate your business? Contact us today.</p>
+        <a href="mailto:contact@techco.com" class="mt-6 inline-block px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600">Email Us</a>
+        <div class="flex justify-center gap-6 mt-6">
+            <a href="#" class="text-blue-500 dark:text-blue-400 hover:text-blue-300">Twitter</a>
+            <a href="#" class="text-blue-500 dark:text-blue-400 hover:text-blue-300">LinkedIn</a>
+            <a href="#" class="text-blue-500 dark:text-blue-400 hover:text-blue-300">Facebook</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-5 text-center bg-gray-300 dark:bg-gray-900">
+        <p class="text-gray-700 dark:text-gray-400">&copy; 2025 TechCo. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
